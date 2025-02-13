@@ -4,78 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <!-- Tag untuk responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Konversi Temperatur</title>
-
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Website Konversi Temperatur</title>
+     
     <!-- Link CSS -->
-    <link rel="stylesheet" href="css\style.css">
+     <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
     <header class="main-header">
-        <h1>Konversi Temperatur</h1>
+        <h1>Konversi Suhu</h1>
     </header>
 
     <main>
         <!-- Introduction -->
         <section>
-            <p>Masukan temperatur derajat Celcius (&deg;C) ke kotak dibawah, lalu
-                klik tombol konversi untuk mendapat hasil konversi dalam bentuk 
-                Fahrenheit (&deg;F)</p>
-            </p>
+            <p> Masukkan temperatur derajat Celcius (&deg;C) ke kotak dibawah, 
+                lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F) 
+                jika ingin sebaliknya tekan tombol "Reverse"</p>
         </section>
 
-        <!-- Form input temperatur yang ingin dikonversi -->
-         <section>
+        <!-- Form Input suhu yang ingin di konversi -->
+        <section>
             <form>
                 <div class="input-group">
-                    <label for="main-input">Celcius</label>
-                    <input type="number" id="main-input">
-                </div>
-                
+                    <label id="main-label" for="main-input">Celcius :</label>
+                    <input type="number" id="main-input" placeholder="Masukkan suhu dalam Celcius">
+                </div>                
+
                 <div class="button-group">
-                    <button>Konversi</button>
-                    <button>Reset</button>
-                    <button>Reverse</button>
+                    <button class="bg-confirm" type="button">Konversi</button>
+                    <button class="bg-reset" type="button">Reset</button>
+                    <button class="bg-reverse" type="button">Reverse</button>
                 </div>
             </form>
-         </section>
+        </section>
 
-         <!-- Hasil konversi -->
-         <section>
+        <!-- Hasil Konversi -->
+        <section>
             <div class="input-group">
-                <label for="main-result">Fahrenheit</label>
-                <input type="number" id="main-result" readonly>
-            </div>
-         </section>
+                <label id="main-result-label" for="main-result">Fahrenheit :</label>
+                <input type="text" id="main-result" readonly>
+            </div>            
+        </section>
 
-         <!-- Cara Konversi Temperatur -->
-          <section>
+        <!-- Cara Konversi Suhu -->
+        <section>
             <div class="input-group">
-                <label for="cara-konversi">Cara Konversi</label>
-                <input type="number" id="cara-konversi" readonly>
+                <label for="cara-konversi">Cara Konversi :</label>
+                <input type="text" id="cara-konversi" readonly>
             </div>
-          </section>
+        </section>
 
-          <!-- Penjelasan Rumus Konversi Temperatur -->
-           <section>
+        <!-- Penjelasan Rumus Konversi Suhu -->
+        <section>
             <header>
-                <h3>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3>
+                <h3>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3>
             </header>
 
             <hr>
 
             <article>
-                <p>Temperatur <span class="remark">(T)</span> dalam derajat Fahrenheit (&deg;F) sama dengan Temperatur <span>(T)</span>
-                dalam derajat Celcius (&deg;C) kali 9/5 tambah 32.</p>
-                <p>S<sub>(&deg;F)</sub></p>
+                <p>Suhu <i><span class="remark">S</span></i> dalam derajat Fahrenheit (&deg;F) sama dengan Suhu <i><span class="remark">S</span></i> dalam derajat Celcius (&deg;C) kali
+                9/5 tambah 32.</p>
+                <p class="rumus-1"><i>S</i><sub>(&deg;F)</sub>= (<i>S</i><sub>(&deg;C)</sub> &times; 9/5) + 32</p>
             </article>
-           </section>
+        </section>
+        <section>
+            <header>
+                <h3>Cara Konversi dari Fahrenheit (&deg;F) ke Celcius (&deg;C)</h3>
+            </header>
+
+            <hr>
+
+            <article>
+                <p>Suhu <i><span class="remark">S</span></i> dalam derajat Celcius (&deg;C) sama dengan Suhu <i><span class="remark">S</span></i> dalam derajat Fahrenheit (&deg;F) kurang
+                32 kali 5/9.</p>
+                <p class="rumus-2"><i>S</i><sub>(&deg;C)</sub>= (<i>S</i><sub>(&deg;F)</sub> - 32) &times; 5/9</p>
+            </article> 
+        </section>
     </main>
-
     <footer>
-        <p>Made by Hanzz</p>
+        <p>Copyright : Made By Muhammad Abi Yazid @ 2025</p>
     </footer>
-</body>
 
+    <!-- Link JavaScript -->
+    <script src="js\script.js"></script>
+</body>
 </html>
